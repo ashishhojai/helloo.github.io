@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="gamecontainer">
+    <div id="box"></div>
+    <div id = "enemy"></div>
+    <div id="enemy2"></div>
+    <div id="enemy3"></div>
+    <div id="enemy4"></div>
+    <div id="enemy6"></div>
+    <div id="enemy7"></div>
+        </div>
+
+    <style>
+
+        body{
+            overflow: hidden;
+        }
+
+        .gamecontainer{
+            background-color: black;
+            width:2000px;
+            height: 1100px;
+            border-width: 200px;
+            border-color: red;
+            
+        }
+        #box{
+            width:50px;
+            height:50px;
+            background-color: cornflowerblue;
+      margin:30px;
+        }
+    #enemy{
+        animation-name:enemy;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        position: relative;
+        width:50px;
+            height:50px;
+            background-color: cornflowerblue;
+      margin:30px;
+    }
+    @keyframes enemy {
+        0%{
+            left:100vw;
+        }
+        100%{
+            left:0vw;
+        }
+    }
+
+    #enemy2{
+        animation-name:enemy2;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+        position: relative;
+        width:50px;
+            height:50px;
+            background-color: cornflowerblue;
+      margin:30px;
+    }
+    @keyframes enemy2 {
+        0%{
+            left:0vw;
+        }
+        100%{
+            left:100vw;
+        }
+    }
+
+    #enemy3{
+        animation-name:enemy3;
+        animation-duration: 9s;
+        animation-iteration-count: infinite;
+        position: relative;
+        width:50px;
+            height:50px;
+            background-color: cornflowerblue;
+      margin:30px;
+    }
+    @keyframes enemy3 {
+        0%{
+            left:100vw;
+        }
+        100%{
+            left:0vw;
+        }
+    }
+
+    #enemy4{
+        animation-name:enemy4;
+        animation-duration: 9s;
+        animation-iteration-count: infinite;
+        position: relative;
+        width:50px;
+            height:50px;
+            background-color: cornflowerblue;
+      margin:30px;
+        
+    }
+    @keyframes enemy4 {
+        0%{
+            left:0vw;
+        }
+        100%{
+            left:100vw;
+        }
+    }
+
+    #enemy6{
+        animation-name:enemy6;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        position: relative;
+        width:50px;
+            height:50px;
+            background-color: cornflowerblue;
+      margin:30px;
+    }
+    @keyframes enemy6 {
+        0%{
+            left:100vw;
+        }
+        100%{
+            left:0vw;
+        }
+    }
+
+    #enemy7{
+        animation-name:enemy7;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+        position: relative;
+        width:50px;
+            height:50px;
+            background-color: cornflowerblue;
+      margin:30px;
+    }
+    @keyframes enemy7 {
+        0%{
+            left:0vw;
+        }
+        100%{
+            left:100vw;
+        }
+    }
+    </style>
+
+    <script>
+        var box = document.querySelector('#box');
+        
+
+        window.addEventListener('load',function(){
+            box.style.backgroundColor='red';
+        box.style.left=0;
+        box.style.top = 0;
+        box.style.position='relative';
+        })
+
+        window.addEventListener('keyup',function(e){
+            console.log(e.key);
+            if(e.key=='ArrowLeft'){
+                box.style.left = parseInt(box.style.left)-10  +'px';
+
+            }
+            else if (e.key=='ArrowRight'){
+                box.style.left = parseInt(box.style.left)+10 + 'px';
+
+            }
+            else if (e.key=='ArrowUp'){
+                box.style.top = parseInt(box.style.top)-10 + 'px';
+            }
+            else if (e.key=='ArrowDown'){
+                box.style.top = parseInt(box.style.top)+10 + 'px';
+            }
+            else if(e.key=='Enter'){
+                    
+            }
+            
+        })
+    </script>
+</body>
+</html>
